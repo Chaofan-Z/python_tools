@@ -7,16 +7,20 @@ import matplotlib.pyplot as plt
 
 
 """
--- DATA FORMAT --
-expname	cvr
-base1	0.001897536
-exp6	9.15009E-06
-exp6	4.39412E-05
-base1	9.08746E-05
-exp6	0.000883182
+Example : 
+  -- DATA FORMAT --
+  expname	cvr
+  base1	0.001897536
+  exp6	9.15009E-06
+  exp6	4.39412E-05
+  base1	9.08746E-05
+  exp6	0.000883182
+key_column : 区分维度的列名
+key_vlaue : key_column中期望匹配的值
 """
 def read_csv1(filename, key_column, key_value, sep):
   file_data = pd.read_csv(filename, sep=sep).dropna()
+  print(file_data.info())
   process_data = []
   for key in key_value:
     process_data.append(file_data[file_data[key_column] == key].dropna())
@@ -44,10 +48,10 @@ def draw_histogram(filename, sep=',', key_column = 'expname',
   # exp_bins = get_data_bins(exp_data[data_column], bins_number)
 
   for i, data in enumerate(process_data):
-    plt.hist(data[data_column], bins=bins_number, alpha=0.5, label='{0}_{1}_hist_{2}'.format(key_column, key_value[i], draw_flag))
+    plt.hist(data[data_column], bins=bins_number, alpha=0.4, label='{0}_{1}_hist_{2}'.format(key_column, key_value[i], draw_flag))
 
   plt.xlabel(data_column)
   plt.ylabel('Frequency')
   plt.legend(loc='upper right')
-  plt.title('Frequency Distribution of Lps cvr')
+  plt.title('Frequency Distribution of Cxr')
   # plt.show()
