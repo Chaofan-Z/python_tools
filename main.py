@@ -27,25 +27,52 @@ plt.show()
 
 """
 # key_column="expname"
-# key_value=['base1','exp3','exp4']
+# key_value=['base1','exp2']
 # data_column='cvr'
 
+# key_column="pos"
+# key_value=[1,2,5]
+# data_column='cvr'
+
+# draw_histogram("./data_files/lps_cvr_kai2_base1.csv", sep=',',
+#   key_column=key_column, key_value=key_value, data_column=data_column,
+#   bins_number=100, draw_flag="base", is_log=True)
+
+# draw_histogram("./data_files/lps_cvr_kai2_exp2.csv", sep=',',
+#   key_column=key_column, key_value=key_value, data_column=data_column,
+#   bins_number=100, draw_flag="exp2", is_log=True)
+
+# plt.show()
+
+"""
+
 key_column="pos"
-key_value=[1,2,5]
+key_value=[0,1,2,5,8,9]
 data_column='cvr'
 
 draw_histogram("./data_files/conv_cvr_by_pos_base1.csv", sep=',',
   key_column=key_column, key_value=key_value, data_column=data_column,
-  bins_number=100, draw_flag="base1", is_log=True)
-
-draw_histogram("./data_files/conv_cvr_by_pos_exp3.csv", sep=',',
-  key_column=key_column, key_value=key_value, data_column=data_column,
-  bins_number=100, draw_flag="exp3", is_log=True)
+  bins_number=100, draw_flag="base", is_log=True)
 
 draw_histogram("./data_files/conv_cvr_by_pos_exp4.csv", sep=',',
   key_column=key_column, key_value=key_value, data_column=data_column,
-  bins_number=100, draw_flag="exp4", is_log=True)
+  bins_number=100, draw_flag="exp", is_log=True)
+plt.show()
 
+"""
+
+key_column="expname"
+key_value=['base1', 'exp2', 'exp5']
+data_column='cvr'
+
+draw_histogram("./data_files/conv_cvr_all_del.csv", sep=',',
+  key_column=key_column, key_value=key_value, data_column=data_column,
+  bins_number=100, draw_flag="item_imp", is_log=True)
+plt.show()
+
+draw_histogram("./data_files/conv_cvr_all_item_imp.csv", sep=',',
+  key_column=key_column, key_value=key_value, data_column=data_column,
+  bins_number=100, draw_flag="del", is_log=True)
 plt.show()
 
 

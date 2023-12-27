@@ -1,0 +1,2139 @@
+{
+  "add_default_only_miss": false,
+  "apply_graph_transform": true,
+  "batching_session_type": "serial_device",
+  "btq_incr_topic": "ad_predict_search_creative_item_id_incr",
+  "btq_model_read_qps": 1000,
+  "btq_model_read_thread_num": 10,
+  "btq_read_shard": true,
+  "capacity_in_mem": true,
+  "deploy_hn1": false,
+  "do_not_store_btq_item": true,
+  "embedding_min_fill_ratio": 0.1,
+  "enable_embedding_lookup_directly": true,
+  "enable_field_capacity_check": false,
+  "enable_fixed_cache": false,
+  "enable_idt_item": true,
+  "enable_item_opt": true,
+  "enable_local_feature": true,
+  "enable_pb_cache": false,
+  "enable_skip_parse_item": true,
+  "enable_timing_cache": false,
+  "feature_disable_nearby": false,
+  "grappler_transform_params": "pruning,arithmetic,dependency",
+  "infer_disable_nearby": false,
+  "item_server_cmd": "/ad/ps/item:ad_predict_search_creative_item_online",
+  "item_service_timeout": 20,
+  "item_shard_num": 1,
+  "kai_model": true,
+  "ln_fusion": true,
+  "lru_capacity": 150000,
+  "lru_capacity_gb": 75,
+  "model_max_lag": 3600,
+  "model_src": "btq",
+  "model_type": "infer_service_tf",
+  "need_parse_reco_user_info": true,
+  "only_read_incr_item": true,
+  "output_op_name": "search_prob_sum",
+  "pb_cache_lru_capacity": 7500000,
+  "predict_result_falcon": {
+    "enable": true,
+    "replace_falcon": true
+  },
+  "remap_slot_sign_feature": {
+    "ad_sign_prefix_bit_num": 12,
+    "output_slot_bit_num": 12,
+    "reco_gsu_sign_prefix_bit_num": 10,
+    "reco_sign_prefix_bit_num": 16
+  },
+  "remove_sign_prefix": true,
+  "skip_mix_cluster": true,
+  "store_start_up_threshold": 0.75,
+  "transform_params": "remove_nodes(op=StopGradient,op=CheckNumerics,op=Identity) merge_duplicate_nodes",
+  "use_common_idt_service": true,
+  "use_dist_item_service": true,
+  "use_idt": true,
+  "zero_miss_sign": true,
+  "deploy": {
+
+  },
+  "emp_service": {
+    "0": [
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 93,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 94,
+        "size": 5000000,
+        "slot": 94
+      }
+    ],
+    "emp_capacity_gb": 1,
+    "emp_shard_count": 1,
+    "local": [
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 117,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 96,
+        "size": 5000000,
+        "slot": 96
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 118,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 97,
+        "size": 10000,
+        "slot": 97
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 119,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 98,
+        "size": 100000,
+        "slot": 98
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 120,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 99,
+        "size": 10000,
+        "slot": 99
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 121,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 100,
+        "size": 10000,
+        "slot": 100
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 122,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 101,
+        "size": 100000,
+        "slot": 101
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 123,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 102,
+        "size": 10000,
+        "slot": 102
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 124,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 103,
+        "size": 100000,
+        "slot": 103
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 125,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 104,
+        "size": 10000,
+        "slot": 104
+      },
+      {
+        "capacity": 1000000,
+        "embedding_len": 16,
+        "field": 126,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 105,
+        "size": 1000000,
+        "slot": 105
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 127,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 106,
+        "size": 100000,
+        "slot": 106
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 128,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 107,
+        "size": 5000000,
+        "slot": 107
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 129,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 108,
+        "size": 100000,
+        "slot": 108
+      },
+      {
+        "capacity": 1000000,
+        "embedding_len": 16,
+        "field": 130,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 109,
+        "size": 1000000,
+        "slot": 109
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 131,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 110,
+        "size": 10000,
+        "slot": 110
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 132,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 111,
+        "size": 10000,
+        "slot": 111
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 133,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 112,
+        "size": 5000000,
+        "slot": 112
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 134,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 113,
+        "size": 5000000,
+        "slot": 113
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 135,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 114,
+        "size": 5000000,
+        "slot": 114
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 136,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 115,
+        "size": 5000000,
+        "slot": 115
+      },
+      {
+        "capacity": 50,
+        "embedding_len": 16,
+        "field": 137,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 116,
+        "size": 50,
+        "slot": 116
+      },
+      {
+        "capacity": 1000000,
+        "embedding_len": 16,
+        "field": 138,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 117,
+        "size": 1000000,
+        "slot": 117
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 139,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 118,
+        "size": 1000,
+        "slot": 118
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 140,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 119,
+        "size": 1000,
+        "slot": 119
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 141,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 120,
+        "size": 1000,
+        "slot": 120
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 142,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 121,
+        "size": 1000,
+        "slot": 121
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 143,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 122,
+        "size": 1000,
+        "slot": 122
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 144,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 123,
+        "size": 1000,
+        "slot": 123
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 145,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 124,
+        "size": 1000,
+        "slot": 124
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 146,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 125,
+        "size": 5000000,
+        "slot": 125
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 147,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 126,
+        "size": 5000000,
+        "slot": 126
+      },
+      {
+        "capacity": 3000000,
+        "embedding_len": 16,
+        "field": 148,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 127,
+        "size": 3000000,
+        "slot": 127
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 149,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 128,
+        "size": 5000000,
+        "slot": 128
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 150,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 129,
+        "size": 5000000,
+        "slot": 129
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 151,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 130,
+        "size": 5000000,
+        "slot": 130
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 152,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 131,
+        "size": 5000000,
+        "slot": 131
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 153,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 132,
+        "size": 5000000,
+        "slot": 132
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 154,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 133,
+        "size": 5000000,
+        "slot": 133
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 155,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 134,
+        "size": 5000000,
+        "slot": 134
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 156,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 135,
+        "size": 5000000,
+        "slot": 135
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 157,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 136,
+        "size": 5000000,
+        "slot": 136
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 158,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 137,
+        "size": 5000000,
+        "slot": 137
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 159,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 138,
+        "size": 5000000,
+        "slot": 138
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 160,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 139,
+        "size": 5000000,
+        "slot": 139
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 161,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 140,
+        "size": 5000000,
+        "slot": 140
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 162,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 141,
+        "size": 5000000,
+        "slot": 141
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 163,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 142,
+        "size": 5000000,
+        "slot": 142
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 164,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 143,
+        "size": 5000000,
+        "slot": 143
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 165,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 144,
+        "size": 5000000,
+        "slot": 144
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 166,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 145,
+        "size": 5000000,
+        "slot": 145
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 167,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 146,
+        "size": 5000000,
+        "slot": 146
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 168,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 147,
+        "size": 1000,
+        "slot": 147
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 169,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 148,
+        "size": 1000,
+        "slot": 148
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 170,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 149,
+        "size": 1000,
+        "slot": 149
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 171,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 150,
+        "size": 1000,
+        "slot": 150
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 172,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 151,
+        "size": 1000,
+        "slot": 151
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 173,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 152,
+        "size": 1000,
+        "slot": 152
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 174,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 153,
+        "size": 1000001,
+        "slot": 153
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 175,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 154,
+        "size": 1000001,
+        "slot": 154
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 176,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 155,
+        "size": 1000001,
+        "slot": 155
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 177,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 156,
+        "size": 1000001,
+        "slot": 156
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 178,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 157,
+        "size": 1000001,
+        "slot": 157
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 179,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 158,
+        "size": 1000001,
+        "slot": 158
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 180,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 159,
+        "size": 1000001,
+        "slot": 159
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 181,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 160,
+        "size": 1000001,
+        "slot": 160
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 182,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 161,
+        "size": 1000001,
+        "slot": 161
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 183,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 162,
+        "size": 1000001,
+        "slot": 162
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 184,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 163,
+        "size": 1000001,
+        "slot": 163
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 185,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 164,
+        "size": 1000001,
+        "slot": 164
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 186,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 165,
+        "size": 1000001,
+        "slot": 165
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 187,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 166,
+        "size": 1000001,
+        "slot": 166
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 188,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 167,
+        "size": 1000001,
+        "slot": 167
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 189,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 168,
+        "size": 1000001,
+        "slot": 168
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 190,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 169,
+        "size": 1000001,
+        "slot": 169
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 191,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 170,
+        "size": 1000001,
+        "slot": 170
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 192,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 171,
+        "size": 1000001,
+        "slot": 171
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 193,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 172,
+        "size": 1000001,
+        "slot": 172
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 194,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 195,
+        "size": 1000,
+        "slot": 195
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 195,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 196,
+        "size": 1000,
+        "slot": 196
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 196,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 197,
+        "size": 1000,
+        "slot": 197
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 197,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 198,
+        "size": 1000,
+        "slot": 198
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 198,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 199,
+        "size": 1000,
+        "slot": 199
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 199,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 200,
+        "size": 1000,
+        "slot": 200
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 200,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 201,
+        "size": 1000,
+        "slot": 201
+      },
+      {
+        "capacity": 1000,
+        "embedding_len": 16,
+        "field": 201,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 202,
+        "size": 1000,
+        "slot": 202
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 202,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 203,
+        "size": 1000001,
+        "slot": 203
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 203,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 204,
+        "size": 1000001,
+        "slot": 204
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 204,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 205,
+        "size": 1000001,
+        "slot": 205
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 205,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 206,
+        "size": 5000000,
+        "slot": 206
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 206,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 207,
+        "size": 5000000,
+        "slot": 207
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 0,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 1,
+        "size": 5000000,
+        "slot": 1
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 1,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 2,
+        "size": 5000000,
+        "slot": 2
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 2,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 3,
+        "size": 5000000,
+        "slot": 3
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 3,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 4,
+        "size": 5000000,
+        "slot": 4
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 4,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 5,
+        "size": 5000000,
+        "slot": 5
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 5,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 6,
+        "size": 10000,
+        "slot": 6
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 6,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 7,
+        "size": 100000,
+        "slot": 7
+      },
+      {
+        "capacity": 1000000,
+        "embedding_len": 16,
+        "field": 7,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 8,
+        "size": 1000000,
+        "slot": 8
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 8,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 9,
+        "size": 100000,
+        "slot": 9
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 9,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 10,
+        "size": 5000000,
+        "slot": 10
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 10,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 11,
+        "size": 5000000,
+        "slot": 11
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 11,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 12,
+        "size": 10000,
+        "slot": 12
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 12,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 13,
+        "size": 10000,
+        "slot": 13
+      },
+      {
+        "capacity": 1000000,
+        "embedding_len": 16,
+        "field": 13,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 14,
+        "size": 1000000,
+        "slot": 14
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 14,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 15,
+        "size": 100000,
+        "slot": 15
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 15,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 16,
+        "size": 10000,
+        "slot": 16
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 16,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 17,
+        "size": 10000,
+        "slot": 17
+      },
+      {
+        "capacity": 100,
+        "embedding_len": 16,
+        "field": 17,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 18,
+        "size": 100,
+        "slot": 18
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 18,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 19,
+        "size": 10000,
+        "slot": 19
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 19,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 20,
+        "size": 10000,
+        "slot": 20
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 20,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 21,
+        "size": 10000,
+        "slot": 21
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 21,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 22,
+        "size": 10000,
+        "slot": 22
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 22,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 23,
+        "size": 5000000,
+        "slot": 23
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 23,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 24,
+        "size": 5000000,
+        "slot": 24
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 24,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 25,
+        "size": 5000000,
+        "slot": 25
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 25,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 26,
+        "size": 5000000,
+        "slot": 26
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 26,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 27,
+        "size": 5000000,
+        "slot": 27
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 27,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 28,
+        "size": 5000000,
+        "slot": 28
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 28,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 29,
+        "size": 5000000,
+        "slot": 29
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 29,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 30,
+        "size": 5000000,
+        "slot": 30
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 30,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 31,
+        "size": 10000,
+        "slot": 31
+      },
+      {
+        "capacity": 1000000,
+        "embedding_len": 16,
+        "field": 31,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 32,
+        "size": 1000000,
+        "slot": 32
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 32,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 33,
+        "size": 5000000,
+        "slot": 33
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 33,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 34,
+        "size": 5000000,
+        "slot": 34
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 34,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 35,
+        "size": 10000,
+        "slot": 35
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 35,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 36,
+        "size": 5000000,
+        "slot": 36
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 36,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 37,
+        "size": 5000000,
+        "slot": 37
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 37,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 38,
+        "size": 5000000,
+        "slot": 38
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 38,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 39,
+        "size": 5000000,
+        "slot": 39
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 39,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 40,
+        "size": 10000,
+        "slot": 40
+      },
+      {
+        "capacity": 1000000,
+        "embedding_len": 16,
+        "field": 40,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 41,
+        "size": 1000000,
+        "slot": 41
+      },
+      {
+        "capacity": 10000,
+        "embedding_len": 16,
+        "field": 41,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 42,
+        "size": 10000,
+        "slot": 42
+      },
+      {
+        "capacity": 1000000,
+        "embedding_len": 16,
+        "field": 42,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 43,
+        "size": 1000000,
+        "slot": 43
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 43,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 44,
+        "size": 100000,
+        "slot": 44
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 44,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 45,
+        "size": 100000,
+        "slot": 45
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 45,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 46,
+        "size": 100000,
+        "slot": 46
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 46,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 47,
+        "size": 5000000,
+        "slot": 47
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 47,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 48,
+        "size": 5000000,
+        "slot": 48
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 48,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 49,
+        "size": 5000000,
+        "slot": 49
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 49,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 50,
+        "size": 5000000,
+        "slot": 50
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 50,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 51,
+        "size": 5000000,
+        "slot": 51
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 51,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 52,
+        "size": 5000000,
+        "slot": 52
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 52,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 53,
+        "size": 5000000,
+        "slot": 53
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 53,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 54,
+        "size": 5000000,
+        "slot": 54
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 54,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 55,
+        "size": 5000000,
+        "slot": 55
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 55,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 56,
+        "size": 5000000,
+        "slot": 56
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 56,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 57,
+        "size": 5000000,
+        "slot": 57
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 57,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 58,
+        "size": 5000000,
+        "slot": 58
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 58,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 59,
+        "size": 5000000,
+        "slot": 59
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 59,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 60,
+        "size": 5000000,
+        "slot": 60
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 60,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 61,
+        "size": 5000000,
+        "slot": 61
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 61,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 62,
+        "size": 5000000,
+        "slot": 62
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 62,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 63,
+        "size": 5000000,
+        "slot": 63
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 63,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 64,
+        "size": 5000000,
+        "slot": 64
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 64,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 65,
+        "size": 5000000,
+        "slot": 65
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 65,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 66,
+        "size": 5000000,
+        "slot": 66
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 66,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 67,
+        "size": 5000000,
+        "slot": 67
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 67,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 68,
+        "size": 5000000,
+        "slot": 68
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 68,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 69,
+        "size": 5000000,
+        "slot": 69
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 69,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 70,
+        "size": 5000000,
+        "slot": 70
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 70,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 71,
+        "size": 5000000,
+        "slot": 71
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 71,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 72,
+        "size": 5000000,
+        "slot": 72
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 72,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 73,
+        "size": 5000000,
+        "slot": 73
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 73,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 74,
+        "size": 5000000,
+        "slot": 74
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 74,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 75,
+        "size": 5000000,
+        "slot": 75
+      },
+      {
+        "capacity": 100000,
+        "embedding_len": 16,
+        "field": 75,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 76,
+        "size": 100000,
+        "slot": 76
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 76,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 77,
+        "size": 5000000,
+        "slot": 77
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 77,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 78,
+        "size": 5000000,
+        "slot": 78
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 78,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 79,
+        "size": 5000000,
+        "slot": 79
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 79,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 80,
+        "size": 5000000,
+        "slot": 80
+      },
+      {
+        "capacity": 100,
+        "embedding_len": 16,
+        "field": 80,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 81,
+        "size": 100,
+        "slot": 81
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 81,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 82,
+        "size": 5000000,
+        "slot": 82
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 82,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 83,
+        "size": 5000000,
+        "slot": 83
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 83,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 84,
+        "size": 5000000,
+        "slot": 84
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 84,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 85,
+        "size": 5000000,
+        "slot": 85
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 85,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 86,
+        "size": 5000000,
+        "slot": 86
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 86,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 87,
+        "size": 5000000,
+        "slot": 87
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 87,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 88,
+        "size": 5000000,
+        "slot": 88
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 88,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 89,
+        "size": 5000000,
+        "slot": 89
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 89,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 90,
+        "size": 5000000,
+        "slot": 90
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 90,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 91,
+        "size": 5000000,
+        "slot": 91
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 91,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 92,
+        "size": 5000000,
+        "slot": 92
+      },
+      {
+        "capacity": 5000000,
+        "embedding_len": 16,
+        "field": 92,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 93,
+        "size": 5000000,
+        "slot": 93
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 94,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 95,
+        "size": 1000001,
+        "slot": 95
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 95,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 173,
+        "size": 100001,
+        "slot": 173
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 96,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 174,
+        "size": 100001,
+        "slot": 174
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 97,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 175,
+        "size": 100001,
+        "slot": 175
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 98,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 176,
+        "size": 100001,
+        "slot": 176
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 99,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 177,
+        "size": 100001,
+        "slot": 177
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 100,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 178,
+        "size": 100001,
+        "slot": 178
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 101,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 179,
+        "size": 100001,
+        "slot": 179
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 102,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 180,
+        "size": 100001,
+        "slot": 180
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 103,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 181,
+        "size": 100001,
+        "slot": 181
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 104,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 182,
+        "size": 100001,
+        "slot": 182
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 105,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 183,
+        "size": 100001,
+        "slot": 183
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 106,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 184,
+        "size": 100001,
+        "slot": 184
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 107,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 185,
+        "size": 100001,
+        "slot": 185
+      },
+      {
+        "capacity": 101,
+        "embedding_len": 16,
+        "field": 108,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 186,
+        "size": 101,
+        "slot": 186
+      },
+      {
+        "capacity": 1000001,
+        "embedding_len": 16,
+        "field": 109,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 187,
+        "size": 1000001,
+        "slot": 187
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 110,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 188,
+        "size": 100001,
+        "slot": 188
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 111,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 189,
+        "size": 100001,
+        "slot": 189
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 112,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 190,
+        "size": 100001,
+        "slot": 190
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 113,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 191,
+        "size": 100001,
+        "slot": 191
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 114,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 192,
+        "size": 100001,
+        "slot": 192
+      },
+      {
+        "capacity": 100001,
+        "embedding_len": 16,
+        "field": 115,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 193,
+        "size": 100001,
+        "slot": 193
+      },
+      {
+        "capacity": 101,
+        "embedding_len": 16,
+        "field": 116,
+        "mio_bucket_size": 0,
+        "prefix": 0,
+        "remap_slot": 194,
+        "size": 101,
+        "slot": 194
+      }
+    ],
+    "ps_capacity_gb": 31
+  }
+}
